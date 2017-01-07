@@ -1,0 +1,101 @@
+.im-zyAc{
+    background-image: url("../img/zyAc.png");
+}
+
+.im-zy{
+    background-image: url("../img/zy.png");
+}
+
+.im-gzAc{
+    background-image: url("../img/gzAc.png");
+}
+
+.im-gz{
+    background-image: url("../img/gz.png");
+}
+
+.im-gjAc{
+    background-image: url("../img/gjAc.png");
+}
+
+.im-gj{
+    background-image: url("../img/gj.png");
+}
+
+.im-wAc{
+    background-image: url("../img/wAc.png");
+}
+
+.im-w{
+    background-image: url("../img/w.png");
+}
+.im-cun{
+    background-image: url("../img/cun.png");
+}
+.im-zu{
+    background-image: url("../img/zu.png");
+}
+
+.im-shou{
+    background-image: url("../img/zu.png");
+}
+
+.im-jh{
+    background-image: url("../img/jh.png");
+}
+
+.im-ceng1{
+    background-image: url("../img/ceng1.png");
+}
+
+.im-ceng2{
+    background-image: url("../img/ceng2.png");
+}
+
+.im-ceng3{
+    background-image: url("../img/ceng3.png");
+}
+
+.im-ceng4{
+    background-image: url("../img/ceng4.png");
+}
+
+.im-wendu{
+    background-image: url("../img/wendu.png");
+}
+
+.im-shidu{
+    background-image: url("../img/shidu.png");
+}
+
+
+.jieshao{
+    background-color:#fff9c4;
+    box-shadow: 3px 3px 3px;
+}
+
+.cengshu{
+    height: 5em;
+    width: 100%;
+}
+
+.gm{
+    background:red;
+    font-size: 1em;
+    width: 60%;
+
+}
+
+.sc{
+    background:#FC7800; 
+    font-size: 1em;
+    width: 60%;
+}
+
+.zt{
+    font-size: 1.2em;
+}
+.guizi{
+    color: black;
+}
+

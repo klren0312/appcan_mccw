@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html class="um landscape min-width-240px min-width-320px min-width-480px min-width-768px min-width-1024px">
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <link rel="stylesheet" href="css/fonts/font-awesome.min.css">
+        <link rel="stylesheet" href="css/ui-box.css">
+        <link rel="stylesheet" href="css/ui-base.css">
+        <link rel="stylesheet" href="css/ui-color.css">
+        <link rel="stylesheet" href="css/appcan.icon.css">
+        <link rel="stylesheet" href="css/appcan.control.css">
+        <link rel="stylesheet" href="css/mystyle.css" />
+    </head>
+    <body class="um-vp bc-bg" ontouchstart>
+
+
+        <br />
+        <center>
+            <p class="btn ub ub-ac bc-text-head ub-pc " style="background:#33691e;color: #636363">
+                <b style="font-size: 1.5em;color: white;">妙存储物柜子</b><br />
+                <b style="color: white;">类型及数量</b>
+                </p>
+            </center>
+        <br />
+        <!-- 九宫格  -->
+        <div class="ub ub-ac ub-pc" style="background-color: #43a047;height:9em;bottom:0;width:100%;color:black;">
+                    
+                    <div class="ub ub-f1 ub-ver ubr ceng1">
+                        <div class="ub ub-ac ub-pc">
+                            <img style="width: 4em;height: 4em;" src="img/ceng4.png" />
+                        </div>
+                        <div class="ub ub-ac ub-pc sc-text guizi" >
+                        <b>储藏间&nbsp;&nbsp;*1&nbsp;&nbsp;</b>
+                        </div>
+                        <center><button class="bt gm bc-text-head">购买</button></center>
+                        <center><button class="bt sc bc-text-head">收藏</button></center>
+                    </div>
+                    
+                    <div class="ub ub-f1 ub-ver  ceng4">
+                        <div class="ub ub-ac ub-pc" >
+                            <img style="width: 4em;height: 4em;" src="img/ceng1.png"/>
+                        </div>
+                        <div class="ub ub-ac ub-pc sc-text guizi" >
+                                                       <b>存储柜1*14</b>
+                        </div>
+                        <center><button class="bt gm bc-text-head">购买</button></center>
+                        <center><button class="bt sc bc-text-head">收藏</button></center>
+                    </div>                    
+                    
+                    
+             
+        </div>
+        <br />
+        <div class="ub ub-ac ub-pc" style="background-color: #43a047;height:9em;bottom:0;width:100%;color:black;">
+
+                    
+                    <div class="ub ub-f1 ub-ver ubr ceng3" >
+                        <div class="ub ub-ac ub-pc">
+                            <img style="width: 4em;height: 4em;" src="img/ceng2.png"/>
+                        </div>
+                        <div class="ub ub-ac ub-pc sc-text guizi" >
+                                                            <b>存储柜2*18</b>
+                        </div>
+                        <center><button class="bt gm bc-text-head">购买</button></center>
+                        <center><button class="bt sc bc-text-head">收藏</button></center>
+                    </div>
+                    
+                    <div class="ub ub-f1 ub-ver ubr ceng2">
+                        <div class="ub ub-ac ub-pc">
+                            <img style="width: 4em;height: 4em;" src="img/ceng5.png" />
+                        </div>
+                        <div class="ub ub-ac ub-pc sc-text guizi" >
+                       <b>存储柜3*27</b>
+                        </div>
+                        <center><button class="bt gm bc-text-head">购买</button></center>
+                        <center><button class="bt sc bc-text-head">收藏</button></center>
+                    </div>
+        </div>        
+       <br />
+        <div><center>
+            <b style="font-size: 2em;font-family: '华文彩云';color: #64dd17;">
+                想寄放东西吗&nbsp;?<br />              
+                想出售二手货吗?<br />
+                <span style="color:#ff5722; ">来妙存储物馆!!</span>
+            </b></center>
+            
+   
+        </div>
+        
+        <script src="js/appcan.js"></script>
+        <script src="js/appcan.control.js"></script>
+   <script src="js/appcan.slider.js"></script>
+ </body>
+    <script>
+        appcan.ready(function() {
+            appcan.initBounce();
+        })
+        
+ 
+        appcan.button(".ceng1", "ani-act", function() {
+            appcan.window.open({
+                     name:name,
+                     dataType:0,
+                     aniId:2,
+                     data:"guizi/chucangjian.html", 
+                });      
+        })
+        
+        appcan.button(".ceng2", "ani-act", function() {
+             appcan.window.open({
+                     name:name,
+                     dataType:0,
+                     aniId:2,
+                     data:"guizi/guizi27.html", 
+              });     
+        })  
+        
+        appcan.button(".ceng3", "ani-act", function() {
+              appcan.window.open({
+                     name:name,
+                     dataType:0,
+                     aniId:2,
+                     data:"guizi/guizi18.html", 
+              }); 
+                    
+        })
+        
+        appcan.button(".ceng4", "ani-act", function() {
+              appcan.window.open({
+                     name:name,
+                     dataType:0,
+                     aniId:2,
+                     data:"guizi/guizi14.html", 
+              });          
+        })                        
+ </script>
+</html>

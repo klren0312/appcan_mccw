@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html class="um landscape min-width-240px min-width-320px min-width-480px min-width-768px min-width-1024px">
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <link rel="stylesheet" href="css/fonts/font-awesome.min.css">
+        <link rel="stylesheet" href="css/ui-box.css">
+        <link rel="stylesheet" href="css/ui-base.css">
+        <link rel="stylesheet" href="css/ui-color.css">
+        <link rel="stylesheet" href="css/appcan.icon.css">
+        <link rel="stylesheet" href="css/appcan.control.css">
+        <link rel="stylesheet" href="css/mystyle.css" />
+    </head>
+    <body class="um-vp bc-bg" ontouchstart>
+        <div style="background-color: #BABABA;"  id="treeview">
+        </div>
+        <br />
+        <br />
+        <div class="sc-bg" id="treeview3">
+        </div>
+        <div class="sc-bg" id="treeview2">
+        </div>
+
+        <script src="js/appcan.js"></script>
+        <script src="js/appcan.control.js"></script>
+        <script src="js/appcan.slider.js"></script>
+        <script src="js/appcan.listview.js"></script>
+        <script src="js/appcan.treeview.js"></script>
+ </body>
+    <script>
+        appcan.ready(function() {
+            appcan.initBounce();
+        })
+        
+ 
+        var tv1 = appcan.treeview({
+            selector : "#treeview",
+            // hasIcon:true,
+            defaultOpen : 1//默认打开第几项，必须包含数据
+        });
+        tv1.set([{
+            header : '<img src="img/riji.png" style="height:2em;width:2em;">妙存小日记',
+            name : "control",
+            url : "gongjupage/xiaoriji.html",
+
+        }]);
+        tv1.on('listviewClick', function(ele, data, obj) {
+            if (data.name == "anim" && data.url) {
+                var animID = parseInt(ele.data("index")) + 1;
+                //获取动画的ID，从1开始。
+                appcan.window.open(data.name, data.url, animID);
+            }  
+        });
+        tv1.on('click', function(ele, obj, subobj) {
+            if (obj.name == "multiWindow") {
+                appcan.window.open({
+                    name : obj.name,
+                    data : obj.url,
+                    dataType : "",
+                    aniId : 10,
+                    width : 50,
+                    height : 500,
+                    type : 256
+                });
+            } else if (obj.name && obj.url) {
+                appcan.window.open(obj.name, obj.url, 10,256);//窗口叠加 网站嵌入
+            }
+        });
+            
+        var tv2 = appcan.treeview({
+            selector : "#treeview3",
+            // hasIcon:true,
+            defaultOpen : 1//默认打开第几项，必须包含数据
+        });
+        tv2.set([ {
+            header : '<img src="img/jiankong.png" style="height:2em;width:2em;">妙存储物馆时控',
+            name : "control"
+        }]);
+        tv2.on('listviewClick', function(ele, data, obj) {
+        });
+        tv2.on('click', function(ele, obj, subobj) {
+            uexWindow.open("w","0","jiankong/jk.html","0","0","0","0","200");
+        });
+        
+        
+        var tv3 = appcan.treeview({
+            selector : "#treeview2",
+
+            defaultOpen : 1//默认打开第几项，必须包含数据
+        });
+        tv3.set([{
+            header : '<img src="img/jizu.png" style="height:2em;width:2em;">妙存寄租',
+            name : "control",
+            url : "gongjupage/jizu.html"
+        },{
+            header : '<img src="img/jishou.png" style="height:2em;width:2em;">妙存寄售',
+            name : "control",
+            url : "gongjupage/jishou.html"
+        },{
+            header : '<img src="img/jiaohuan.png" style="height:2em;width:2em;">妙存等价交换',
+            name : "control",
+            url : "gongjupage/jiaohuan.html"
+        }]);
+        tv3.on('listviewClick', function(ele, data, obj) {
+            if (data.name == "anim" && data.url) {
+                var animID = parseInt(ele.data("index")) + 1;
+                //获取动画的ID，从1开始。
+                appcan.window.open(data.name, data.url, animID);
+            }  
+        });
+        tv3.on('click', function(ele, obj, subobj) {
+            if (obj.name == "multiWindow") {
+                appcan.window.open({
+                    name : obj.name,
+                    data : obj.url,
+                    dataType : "",
+                    aniId : 10,
+                    width : 50,
+                    height : 500,
+                    type : 256
+                });
+            } else if (obj.name && obj.url) {
+                appcan.window.open(obj.name, obj.url, 10,256);//窗口叠加 网站嵌入
+            }
+        });
+ </script>
+</html>

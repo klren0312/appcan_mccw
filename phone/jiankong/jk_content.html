@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html class="um landscape min-width-240px min-width-320px min-width-480px min-width-768px min-width-1024px">
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <link rel="stylesheet" href="../css/fonts/font-awesome.min.css">
+        <link rel="stylesheet" href="../css/ui-box.css">
+        <link rel="stylesheet" href="../css/ui-base.css">
+        <link rel="stylesheet" href="../css/ui-color.css">
+        <link rel="stylesheet" href="../css/appcan.icon.css">
+        <link rel="stylesheet" href="../css/appcan.control.css">
+        <link rel="stylesheet" href="jk_content/css/main.css">
+    </head>
+<body class="um-vp bc-bg" ontouchstart>
+
+    <div>
+        <video src="res://tt.mp4" style="width: 100%; height：20%;"></video>
+    </div>
+    <div class="btn ub ub-ac bc-text-head ub-pc bc-btn" onclick="uexVideo.open('res://tt.mp4')"  id="btn">
+	点击查看监控
+    </div>
+
+<div class="ub ub-ac ub-pc" style="margin-top:0.5em; #E3E3E3;height:6em;bottom:0;width:100%;color:black;">
+    <div class="ub ub-f1 ub-ver ubr ">
+        <div class="ub ub-ac ub-pc">
+             <img style="width: 4em;height: 4em;" src="../img/wendu.png" />
+        </div>
+        <div class="ub ub-ac ub-pc sc-text zt" >
+             <b>温度:22℃</b> 
+        </div>
+    </div>
+                    
+    <div class="ub ub-f1 ub-ver ubr " >
+        <div class="ub ub-ac ub-pc">
+            <img style="width: 4em;height: 4em;" src="../img/shidu.png"/>
+        </div>
+        <div class="ub ub-ac ub-pc sc-text zt" >
+              <b>湿度：42%</b>
+        </div>
+    </div>
+</div>
+
+<div id="listview1"  class="ubt bc-border sc-bg " style="background-color: #78909C">
+</div>
+   <div id="listview2"  class="ubt bc-border sc-bg  ">
+</div>
+
+
+        <script src="../js/appcan.js"></script>
+        <script src="../js/appcan.control.js"></script>
+        <script src="../js/appcan.slider.js"></script>
+        <script src="../js/appcan.listview.js"></script>
+        <script src="../js/appcan.treeview.js"></script>
+
+</body>
+<script>
+ appcan.ready(function() {
+            appcan.initBounce();
+        })
+        
+ 
+var lv = appcan.listview({
+    selector : "#listview2",
+    type : "thinLine",
+    hasAngle:false
+    });
+    lv.set([{
+        title : "小明： 能带我吧湿度降低点吗？",
+        id:""
+    }, {
+        title : "小红： 。。。。。。。。。。",
+        id:""
+    }, {
+        title : "小李： 。。。。。。。。。。",
+        id:""
+    }, {
+        title : "小亮： 。。。。。。。。。。",
+        id:""
+    }, {
+        title : "小花： 。。。。。。。。。。",
+        id:""
+    }])
+    lv.on("click",function(ele,obj,curEle){
+    })
+    
+    var lv = appcan.listview({
+    selector : "#listview1",
+    type : "thinLine",
+    hasAngle:false
+    });
+    lv.set([{
+        title : "<center><p style='color:white'>留言区</center>",
+        id:""
+    }])
+    lv.on("click",function(ele,obj,curEle){
+    })
+
+</script>
+</html>

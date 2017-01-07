@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html class="um landscape min-width-240px min-width-320px min-width-480px min-width-768px min-width-1024px">
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <link rel="stylesheet" href="css/fonts/font-awesome.min.css">
+        <link rel="stylesheet" href="css/ui-box.css">
+        <link rel="stylesheet" href="css/ui-base.css">
+        <link rel="stylesheet" href="css/ui-color.css">
+        <link rel="stylesheet" href="css/appcan.icon.css">
+        <link rel="stylesheet" href="css/appcan.control.css">
+        <link rel="stylesheet" href="left_content/css/main.css">
+    </head>
+    <body class="um-vp bc-bg ub-ver" ontouchstart>
+        <div class="ub ub-ver uinn-out">
+            <div class="ub ub-f1 t-bla ub-ac uinn-out">
+                <div class="ub-img res-avator umwh-avator uc-a2 ub-a2"></div>
+                <div class="ub-f1 ub ub-ver uinn-avator">
+                    <div class="ut-s ub-f1">
+                        妙妙
+                    </div>
+                    <div class="ub t-686 umar-avator">
+                        <div class="ulev-1">
+                            金币：<span>175</span>
+                        </div>
+                        <div class="ulev-1 umar-lname">
+                            积分：<span>3000</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ub ub-f1 c-bad bc-text-head ub-ac uinn-m umar-b kthy">
+                <div class="ub-img res-order umwh-m"></div>
+                <div class="ub-f1 uinn-mtxt ut-s">
+                    开通会员
+                </div>
+                <div class="ub-img res-arrow umw1 umh1"></div>
+            </div>
+            
+            <div class="ub ub-f1 c-faa bc-text-head ub-ac uinn-m umar-b mcqb">
+                <div class="ub-img res-wallet umwh-m"></div>
+                <div class="ub-f1 uinn-mtxt ut-s">
+                    妙存钱包
+                </div>
+                <div class="ub-img res-arrow umw1 umh1"></div>
+            </div>
+            
+            <!-- <div class="ub ub-f1 c-ffe bc-text-head ub-ac uinn-m umar-b gxzb">
+                <div class="ub-img res-message umwh-m"></div>
+                <div class="ub-f1 uinn-mtxt ut-s">
+                    个性装扮
+                </div>
+                <div class="ub-img res-arrow umw1 umh1"></div>
+            </div> -->
+            
+            <div class="ub ub-f1 c-00a bc-text-head ub-ac uinn-m umar-b wdmp">
+                <div class="ub-img res-favorite umwh-m"></div>
+                <div class="ub-f1 uinn-mtxt ut-s">
+                  我的名片夹
+                </div>
+                <div class="ub-img res-arrow umw1 umh1"></div>
+            </div>
+            
+            <div class="ub ub-f1 c-4e6 bc-text-head ub-ac uinn-m umar-b dmsc">
+                <div class="ub-img res-pwdprotection umwh-m"></div>
+                <div class="ub-f1 uinn-mtxt ut-s">
+                    柜子收藏
+                </div>
+                <div class="ub-img res-arrow umw1 umh1"></div>
+            </div>
+            
+        </div>
+        <script src="js/appcan.js"></script>
+        <script src="js/appcan.control.js"></script>
+    </body>
+    <script>
+        appcan.ready(function() {
+            appcan.initBounce();
+        })
+        appcan.button(".kthy", "btn-act", function() {
+           uexWindow.open("kthy","0","leftpage/kthy.html","0","0","0","0","200");
+        })
+        appcan.button(".mcqb", "btn-act", function() {
+           uexWindow.open("mcqb","0","leftpage/mcqb.html","0","0","0","0","200");
+        })
+        // appcan.button(".gxzb", "btn-act", function() {
+           // uexWindow.open("gxzb","0","gxzb.html","0","0","0","0","200");
+        // })
+        appcan.button(".wdmp", "btn-act", function() {
+           uexWindow.open("wdmp","0","leftpage/wdmp.html","0","0","0","0","200");
+        })  
+        appcan.button(".dmsc", "btn-act", function() {
+           uexWindow.open("dmsc","0","leftpage/dmsc.html","0","0","0","0","200");
+        })        
+    </script>
+</html>

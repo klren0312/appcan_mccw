@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html class="um landscape min-width-240px min-width-320px min-width-480px min-width-768px min-width-1024px">
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <link rel="stylesheet" href="css/fonts/font-awesome.min.css">
+        <link rel="stylesheet" href="css/ui-box.css">
+        <link rel="stylesheet" href="css/ui-base.css">
+        <link rel="stylesheet" href="css/ui-color.css">
+        <link rel="stylesheet" href="css/appcan.icon.css">
+        <link rel="stylesheet" href="css/appcan.control.css">
+        <link rel="stylesheet" href="css/mystyle.css" />
+    </head>
+    <body class="um-vp" ontouchstart>
+        <div id="page_0" class="up ub ub-ver bc-bg" tabindex="0">
+            <!--header开始-->
+            <div id="header" class="uh bc-text-head ub bc-head">
+                <div class="nav-btn" id="nav-left">
+                  <div class="fa fa-reorder fa-2x cekuang" onclick="openLeftSlidingWin()"></div>
+                </div>
+                <h1 class="ut ub-f1 ulev-3 ut-s tx-c"  tabindex="0">妙存储物馆</h1>
+                <div class="nav-btn" id="nav-right">
+                    <!--按钮开始-->
+
+                    <!--按钮结束-->
+                </div>
+            </div>
+            <!--header结束--><!--content开始-->
+            <div id="content" class="ub-f1 tx-l ">
+
+            </div>
+            <!--content结束-->
+            
+            <div id="footer" class="uf t-bla ub tab  b-gra2 c-gra2" style="border-top: 1px solid #C9C9C9;background-color: #78909c;padding-top: 0.3em;height:2.5em">
+                <div class="pos_re ub ub-f1">                    
+                    <div id="zy" class="ub-f1 ub ub-ver ">
+                        <div class="ub-f1 ub-img5 im-zy mar_b"></div>
+                        <div class="uinn-a13 ulev-4 tx-c act-col" style="color:#EEEEEE">
+                                                          主页   
+                        </div>
+                    </div>
+                </div>
+                <div class="pos_re ub ub-f1">                   
+                    <div id="gz" class="ub-f1 ub ub-ver">
+                        <div class="ub-f1 ub-img5 im-gz mar_b"></div>
+                        <div class="uinn-a13 ulev-4 ub ub-ac ub-pc " style="color:#EEEEEE"> 
+                                                        柜子
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pos_re ub ub-f1">                   
+                    <div id="gj" class="ub-f1 ub ub-ver ">
+                        <div class="ub-f1 ub-img5 im-gj mar_b"></div>
+                        <div class="uinn-a13 ulev-4 tx-c act-col" style="color:#EEEEEE">
+                                                         工具
+                        </div>
+                    </div>
+                </div>
+                <div class="pos_re ub ub-f1">                   
+                    <div id="w" class="ub-f1 ub ub-ver ">
+                        <div class="ub-f1 ub-img5 im-wAc mar_b"></div>
+                        <div class="uinn-a13 ulev-4 tx-c act-col" style="color:#00A1EA">
+                                                         我
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <script src="js/appcan.js"></script>
+        <script src="js/appcan.control.js"></script>
+    </body>
+    <script>
+        appcan.ready(function() {
+            var titHeight = $('#header').offset().height;
+            appcan.frame.open("content", "wo_content.html", 0, titHeight);
+            window.onorientationchange = window.onresize = function() {
+                appcan.frame.resize("content", 0, titHeight);
+            }
+        });
+        
+                        //-----------------------底部按钮点击事件-----------------
+        appcan.button("#zy", "btn-act", function() {
+           uexWindow.open("zy","0","index.html","0","0","0","0","200");
+        })
+        appcan.button("#gz", "btn-act", function() {
+           uexWindow.open("gz","0","guizi.html","0","0","0","0","200");
+        })
+        appcan.button("#gj", "btn-act", function() {
+           uexWindow.open("gj","0","gongju.html","0","0","0","0","200");
+        })
+        appcan.button("#w", "btn-act", function() {
+           uexWindow.open("w","0","wo.html","0","0","0","0","200");
+        })
+        
+        
+       function openLeftSlidingWin() {
+            appcan.window.setSlidingWindow({
+                leftSliding : {
+                    width : 900,
+                    url : "left_content.html"
+                },
+                animationId : '1', //仿QQ侧滑
+                bg : 'res://1_1.jpg' //仿QQ侧滑；注：res目录为js文件夹同级目录wgtRes
+            });
+
+        }
+    </script>
+</html>

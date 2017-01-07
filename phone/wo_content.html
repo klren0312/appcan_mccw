@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html class="um landscape min-width-240px min-width-320px min-width-480px min-width-768px min-width-1024px">
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <link rel="stylesheet" href="css/fonts/font-awesome.min.css">
+        <link rel="stylesheet" href="css/ui-box.css">
+        <link rel="stylesheet" href="css/ui-base.css">
+        <link rel="stylesheet" href="css/ui-color.css">
+        <link rel="stylesheet" href="css/appcan.icon.css">
+        <link rel="stylesheet" href="css/appcan.control.css">
+        <link rel="stylesheet" href="css/grzz.css" />
+    </head>
+    <body class="um-vp bc-bg" ontouchstart>
+        <div class="top">
+            <div class="tx">
+
+                <img src="left_content/css/images/avator.png" class="djj"/>
+                
+                <div class="mz">姓名：妙妙</div>
+            </div>
+            <br>
+            
+        </div>
+    
+
+        <div class="jd">相关信息</div>
+        <div class="sc-bg" id="treeview">
+        </div>
+
+    <script src="js/appcan.js"></script>
+    <script src="js/appcan.control.js"></script>
+   <script src="js/appcan.listview.js"></script>
+<script src="js/appcan.treeview.js"></script>
+ </body>
+    <script>
+        appcan.ready(function() {
+            appcan.initBounce();
+        })
+
+        var tv = appcan.treeview({
+            selector : "#treeview",
+            defaultOpen : 1//默认打开第几项，必须包含数据
+        });
+        tv.set([{
+            header : '<img src="img/riji.png" style="height:1.5em;width:1.5em;">妙存购物记录',
+            name : "control",
+            url : "wopage/jilu.html"
+        }, {
+            header : '<img src="img/pengyouquan.png" style="height:1.5em;width:1.5em;">妙存趣评',
+            name : "control",
+            url : "wopage/quping.html"
+        }, {
+            header : '<img src="img/hongbao.png" style="height:1.5em;width:1.5em;">妙存小红包',
+            name : "control",
+            url : "wopage/hongbao.html"
+        }, {
+            header : '<img src="img/aixin.png" style="height:1.5em;width:1.5em;">妙存爱心捐助',
+            name : "control",
+            url : "wopage/juanzhu.html"
+        }]);
+        tv.on('listviewClick', function(ele, data, obj) {
+            if (data.name == "anim" && data.url) {
+                var animID = parseInt(ele.data("index")) + 1;
+                //获取动画的ID，从1开始。
+                appcan.window.open(data.name, data.url, animID);
+            }  
+        });
+        tv.on('click', function(ele, obj, subobj) {
+            if (obj.name == "multiWindow") {
+                appcan.window.open({
+                    name : obj.name,
+                    data : obj.url,
+                    dataType : "",
+                    aniId : 10,
+                    width : 50,
+                    height : 500,
+                    type : 256
+                });
+            } else if (obj.name && obj.url) {
+                appcan.window.open(obj.name, obj.url, 10,256);//窗口叠加 网站嵌入
+            }
+        });
+ </script>
+</html>

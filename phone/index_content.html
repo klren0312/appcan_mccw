@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html class="um landscape min-width-240px min-width-320px min-width-480px min-width-768px min-width-1024px">
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <link rel="stylesheet" href="css/fonts/font-awesome.min.css">
+        <link rel="stylesheet" href="css/ui-box.css">
+        <link rel="stylesheet" href="css/ui-base.css">
+        <link rel="stylesheet" href="css/ui-color.css">
+        <link rel="stylesheet" href="css/appcan.icon.css">
+        <link rel="stylesheet" href="css/appcan.control.css">
+        <link rel="stylesheet" href="css/mystyle.css" />
+    </head>
+    <body class="um-vp bc-bg" ontouchstart>
+        <div id="slider" class="slider">
+        </div>
+       <br />
+        <div class="jieshao">
+            <p><b> 妙存储物馆：</b></p>
+            <center>
+                <p><b>
+                  <br /> 
+                   妙存储物馆基于互联网+仓储业的服务平台，
+                   服务于<span style="color:#ef6c00 ">学生</span>、<span style="color:#ef6c00 ">家庭</span>的物品<span style="color: red;">储存</span>，并且附加<span style="color: #007DB8">寄租、寄售、等价交换</span>等业务的服务型公司。
+                </b></p>
+            </center>
+        </div>
+        <br />
+        
+         <!-- 九宫格  -->
+         <div div class="ub ub-ac ub-pc" style="background-color: #E3E3E3;height:6em;bottom:0;width:100%;color:black;">
+              <div class="ub ub-f1 ub-ver ubr ">
+                  <div class="ub ub-ac ub-pc">
+                            <center><img style="width: 40%;height: 40%;" src="img/chucun.png" /></center>
+                  </div>
+               
+               </div>
+         </div>
+    
+            
+            <div class="ub ub-ac ub-pc" style="margin-top:0.5em; #E3E3E3;height:6em;bottom:0;width:100%;color:black;">
+                    
+                    <div class="ub ub-f1 ub-ver ubr ">
+                        <div class="ub ub-ac ub-pc">
+                            <img style="width: 2em;height: 2em;" src="img/zu.png" />
+                        </div>
+                        <div class="ub ub-ac ub-pc sc-text zt" >
+                       <b>寄租</b> 
+                        </div>
+                    </div>
+                    
+                    <div class="ub ub-f1 ub-ver ubr " >
+                        <div class="ub ub-ac ub-pc">
+                            <img style="width: 2em;height: 2em;" src="img/shou.png"/>
+                        </div>
+                        <div class="ub ub-ac ub-pc sc-text zt" >
+                                                                   <b>寄售</b> 
+                        </div>
+                    </div>
+                    
+                    <div class="ub ub-f1 ub-ver  ">
+                        <div class="ub ub-ac ub-pc" >
+                            <img style="width: 2em;height: 2em;" src="img/jh.png"/>
+                        </div>
+                        <div class="ub ub-ac ub-pc sc-text zt" >
+                                                               <b>交换</b>
+                        </div>
+                    </div>  
+       
+        </div>
+        
+        <script src="js/appcan.js"></script>
+        <script src="js/appcan.control.js"></script>
+   <script src="js/appcan.slider.js"></script>
+ </body>
+    <script>
+        appcan.ready(function() {
+            appcan.initBounce();
+        })
+        
+   var slider = appcan.slider({
+      selector : '#slider',
+      aspectRatio:9/16,
+      hasLabel:true,
+      index:0
+    });
+   slider.set([{
+        img : "img/1.png",
+        label:"妙存储物馆"
+    }, {
+        img : "img/2.png",
+        label:"妙存储物馆"
+    }, {
+        img : "img/3.png",
+        label:"妙存储物馆"
+    }])
+    slider.on("clickItem",function(index,data){
+    })
+ </script>
+</html>

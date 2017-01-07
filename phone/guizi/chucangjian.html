@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html class="um landscape min-width-240px min-width-320px min-width-480px min-width-768px min-width-1024px">
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <link rel="stylesheet" href="../css/fonts/font-awesome.min.css">
+        <link rel="stylesheet" href="../css/ui-box.css">
+        <link rel="stylesheet" href="../css/ui-base.css">
+        <link rel="stylesheet" href="../css/ui-color.css">
+        <link rel="stylesheet" href="../css/appcan.icon.css">
+        <link rel="stylesheet" href="../css/appcan.control.css">
+        <link rel="stylesheet" href="../css/main.css">
+        <link rel="stylesheet" href="../css/mystyle.css" />
+    </head>
+    <body class="um-vp " ontouchstart>
+        <div id="page_0" class="up ub ub-ver bc-bg" tabindex="0">
+            <!--header开始-->
+            <div id="header" class="uh bc-text-head ub bc-head">
+                <div class="nav-btn" id="nav-left">
+                    <div class="fa fa-angle-left fa-2x"></div>
+                </div>
+                <h1 class="ut ub-f1 ulev-3 ut-s tx-c" tabindex="0">储藏间</h1>
+                <div class="nav-btn nav-bt" id="nav-right">
+                    <div class="ub-img iocn-more umw2 umh4"></div>
+                </div>
+            </div>
+            <!--header结束-->
+                <br />
+            <div class="ub ub-ver">
+                <img src="img/chuwujian.png" style="height: 30%;width: 100%;" />
+            </div>
+            <div class="ub ub-ver uinn-a1" id="sortList">
+
+            </div>
+            <div class="ub ">
+                <div class="btn ub ub-ac ub-f1 bc-text-head ub-pc bc-btn gm"  id="btn">
+                                                        单个月20元/月 购买&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                                             
+                </div>
+                <div class="btn ub ub-ac ub-f1 bc-text-head ub-pc bc-btn sc"  id="btn">
+                                                        收藏
+                </div>
+            </div>
+            <br />
+            <div class="ub ">
+                <div class="btn ub ub-ac ub-f1 bc-text-head ub-pc bc-btn gm"  id="btn">
+                                                        超过6个月18元/月 购买&nbsp;
+                </div>
+                <div class="btn ub ub-ac ub-f1 bc-text-head ub-pc bc-btn sc"  id="btn">
+                                                        收藏
+                </div>
+            </div>
+            <br />
+            <div class="ub ">
+                <div class="btn ub ub-ac ub-f1 bc-text-head ub-pc bc-btn gm"  id="btn">
+                                                        超过12个月15元/月 购买
+                </div>
+                <div class="btn ub ub-ac ub-f1 bc-text-head ub-pc bc-btn sc"  id="btn">
+                                                        收藏
+                </div>
+            </div>
+
+
+        </div>
+        <script src="../js/appcan.js"></script>
+        <script src="../js/appcan.control.js"></script>
+    </body>
+    <script>
+
+        appcan.button(".nav-btn", "btn-act", function() {
+            appcan.window.close(-1);
+        })
+        appcan.ready(function() {
+            appcan.initBounce();
+            sortList();
+        })
+        function sortList() {
+            var arrData = [{
+                "sort" : "<span style='color:white;'>规格：3㎡</span>",
+            
+            }, {
+                "sort" : "<span style='color:white;'>价格：20元/月</span>",
+               
+            }];
+            var tmpl = '<div style="background:#00695c;" class="uba bc-border c-wh umar-at1">' + '   <ul class="ub t-bla ub-ac uinn-pFS1">' + '       <li class="ub-f1 ut-s">${sort}</li>' + '       <li class="tx-r t-gra-pFS1"><span class="t-bla">${num}</span><span>/${total}</span></li>' + '       <li class="lis-sw ub-img arrow"></li>' + '   </ul>' + '</div>'
+            var s = appcan.tempRenderList(tmpl, arrData, appcan.getObjLength(arrData));
+            var d = document.createElement('DIV');
+            d.innerHTML = s;
+            $('#sortList')[0].appendChild(d);
+        }
+   
+   appcan.button(".btn", "ani-act", function() {
+            
+    })
+
+    </script>
+</html>

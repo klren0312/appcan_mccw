@@ -1,0 +1,46 @@
+.top{
+    height:10em;
+    width:100%;
+    background-color: #218DD5;
+    position: relative;
+}
+.tx{
+    height:5em;
+    width:5em;
+    background: #fff;
+    border-radius: 50%;
+    position: absolute;
+    margin-top: 2em;
+    margin-left: 40%;
+    
+}
+.tx img{
+    height:5em;
+    width:5em;
+    border-radius: 50%;  
+}
+
+.mz{
+    color: #fff;
+    font-family: "微软雅黑";
+    font-size: 1em;
+    height:2em;
+    width:10em;
+
+
+    
+}
+.jd{
+     height:2em;
+     width:100%;
+     text-align:center; 
+     line-height: 2em; 
+     font-size: 1em;
+     background:#F16412;
+     color:#fff;
+
+}
+.com{
+    width:100%;
+    background-size:100%;  
+}
